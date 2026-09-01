@@ -9,27 +9,23 @@ class: text-center
 drawings:
   persist: false
 transition: fade-out
-mdc: true
+mdc: false
 ---
 
-<div class="cover">
-  <div>
-    <h1>0. Introducing C++</h1>
-    <p><a href="https://hengxin.github.io/">Hengfeng Wei (魏恒峰)</a><br>hfwei@nju.edu.cn</p>
-    <img class="title-logo" src="./figs/cpp-logo.png" alt="C++ logo">
-    <p>Sep. 19, 2024</p>
-  </div>
-</div>
+# 0. Introducing C++
+
+[Hengfeng Wei (魏恒峰)](https://hengxin.github.io/)\\
+hfwei@nju.edu.cn
+
+![C++ logo](./figs/cpp-logo.png)
+
+Sep. 19, 2024
 
 ---
-layout: center
-class: no-page
+class: no-page two-media
 ---
 
-<div class="two-images">
-  <img src="./figs/2024CPL.jpg" alt="2024 CPL class information">
-  <img src="./figs/2024CPL-Notice.jpg" alt="2024 CPL course notice">
-</div>
+![2024 CPL class information](./figs/2024CPL.jpg) ![2024 CPL course notice](./figs/2024CPL-Notice.jpg)
 
 ---
 class: image-slide
@@ -37,9 +33,9 @@ class: image-slide
 
 # Questionnaire (1)
 
-<img src="./figs/25-75.jpg" alt="25 percent and 75 percent illustration">
+![25 percent and 75 percent illustration](./figs/25-75.jpg)
 
-<mark>75%</mark> of students are new to programming.
+**75%** of students are new to programming.
 
 ---
 class: image-slide
@@ -47,9 +43,9 @@ class: image-slide
 
 # Questionnaire (2)
 
-<img src="./figs/90-10-blackboard.webp" alt="90 percent and 10 percent illustration">
+![90 percent and 10 percent illustration](./figs/90-10-blackboard.webp)
 
-<span class="red">10%</span> of students attended in some programming contests.
+**10%** of students attended in some programming contests.
 
 ---
 class: image-slide
@@ -57,9 +53,9 @@ class: image-slide
 
 # Questionnaire (3)
 
-<img src="./figs/know-nothing.webp" alt="Beginner programming illustration">
+![Beginner programming illustration](./figs/know-nothing.webp)
 
-### <mark>The C++ Beginners (know 0%)</mark>
+### **The C++ Beginners (know 0%)**
 
 ---
 class: image-slide
@@ -67,7 +63,7 @@ class: image-slide
 
 # The C++ Beginners
 
-<img src="./figs/panic.png" alt="Don't panic illustration">
+![Don't panic illustration](./figs/panic.png)
 
 ---
 class: image-slide
@@ -75,18 +71,18 @@ class: image-slide
 
 # To The C++ Beginners
 
-<img src="./figs/donot-panic.jpg" alt="Do not panic illustration">
+![Do not panic illustration](./figs/donot-panic.jpg)
 
 ---
 layout: center
-class: text-center
+class: text-center journey-slide
 ---
 
 # From Beginners to Masters
 
 ## Programming
 
-## <span class="red">De-Programming</span>
+## De-Programming
 
 ---
 class: image-slide compact-image
@@ -94,7 +90,7 @@ class: image-slide compact-image
 
 ## [cpl-docs @ docs.cpl.icu](http://docs.cpl.icu)
 
-<img src="./figs/cpl-docs.png" alt="CPL Docs QR code">
+![CPL Docs QR code](./figs/cpl-docs.png)
 
 ---
 class: image-slide compact-image
@@ -102,170 +98,142 @@ class: image-slide compact-image
 
 ## [CPL Docs @ FeiShu](https://ymv59wdgrr.feishu.cn/wiki/A1HzwviAgiFnQwkfRUWcVjqunLf?from=from_copylink)
 
-<img src="./figs/docs.png" alt="CPL Docs QR code in Feishu">
+![CPL Docs QR code in Feishu](./figs/docs.png)
 
 ---
-class: image-slide
+class: two-media resource-slide
 ---
 
 ## [oj @ oj.cpl.icu; oj @ public.oj.cpl.icu](https://public.oj.cpl.icu/)
 
-<div class="two-images">
-  <img src="./figs/oj-0-intro.png" alt="Online judge screenshot">
-  <img src="./figs/qrcode-public-oj.png" alt="Online judge QR code">
-</div>
+![Online judge screenshot](./figs/oj-0-intro.png) ![Online judge QR code](./figs/qrcode-public-oj.png)
 
 ---
-class: image-slide
+class: two-media resource-slide
 ---
 
 # [2024cpl @ Zulip](https://2024cpl.zulipchat.com/join/t4kpy6uj6ximq7k3qwve5smj/)
 
-<div class="two-images">
-  <img src="./figs/zulip.png" alt="Zulip logo">
-  <img src="./figs/zulip-qrcode.png" alt="Zulip QR code">
-</div>
+![Zulip logo](./figs/zulip.png) ![Zulip QR code](./figs/zulip-qrcode.png)
 
 ---
-class: side-image
+class: scores-slide
 ---
-
-<div>
 
 # Scores
 
-<ul class="score-list">
-  <li><span class="muted-strike">考勤 (非必要不点名)</span></li>
-  <li><span class="blue">平时编程练习 (10 分)</span></li>
-  <li><span class="blue">阶段机试 1 (15 分)</span></li>
-  <li><span class="blue">阶段机试 2 (20 分)</span></li>
-  <li><span class="blue">期末机试 (30 分)</span></li>
-  <li><span class="blue">期末项目 (25 分)</span></li>
-</ul>
+- ~~考勤 (非必要不点名)~~
+- 平时编程练习 (10 分)
+- 阶段机试 1 (15 分)
+- 阶段机试 2 (20 分)
+- 期末机试 (30 分)
+- 期末项目 (25 分)
 
-</div>
-
-<img src="./figs/score.jpg" alt="Score distribution illustration">
+![Score distribution illustration](./figs/score.jpg)
 
 ---
-class: image-slide
+class: image-slide warning-slide
 ---
 
 # No Plagiarism!!!
 
-<img src="./figs/plagiarism.jpg" alt="No plagiarism poster">
+![No plagiarism poster](./figs/plagiarism.jpg)
 
-<span class="red"><strong>编程练习</strong></span>: 每次扣 5 分, 10 分扣完为止; <span class="red"><strong>期末项目</strong></span>: 项目分数清零
-
----
-class: image-slide
----
-
-<img src="./figs/ask-me-anything.png" alt="Ask me anything">
-
-### <mark>About the 2024CPL Class</mark>
-
----
-layout: center
-class: no-page
----
-
-<div class="two-images">
-  <img src="./figs/textbook-nju.JPG" alt="C++ programming textbook">
-  <img src="./figs/textbook-moderncpp.jpg" alt="Modern C++ textbook">
-</div>
-
----
-layout: center
-class: no-page
----
-
-<img src="./figs/not-recommended.jpg" alt="Not recommended reading">
-
----
-layout: center
-class: no-page
----
-
-<div class="two-images">
-  <img src="./figs/textbook-nju.JPG" alt="C++ textbook from Nanjing University">
-  <img src="./figs/textbook-moderncpp.jpg" alt="Modern C++ programming textbook">
-</div>
+**编程练习**：每次扣 5 分，10 分扣完为止；**期末项目**：项目分数清零
 
 ---
 class: image-slide
+---
+
+![Ask me anything](./figs/ask-me-anything.png)
+
+### **About the 2024CPL Class**
+
+---
+class: no-page two-media
+---
+
+![C++ programming textbook](./figs/textbook-nju.JPG) ![Modern C++ textbook](./figs/textbook-moderncpp.jpg)
+
+---
+layout: center
+class: no-page book-slide
+---
+
+![Not recommended reading](./figs/not-recommended.jpg)
+
+---
+class: no-page two-media
+---
+
+![C++ textbook from Nanjing University](./figs/textbook-nju.JPG) ![Modern C++ programming textbook](./figs/textbook-moderncpp.jpg)
+
+---
+class: image-slide three-media
 ---
 
 # C++ Foundations
 
-<div class="three-images">
-  <img src="./figs/cpp-logo.png" alt="C++ logo">
-  <img src="./figs/textbook-nju.JPG" alt="C++ programming textbook">
-  <img src="./figs/textbook-moderncpp.jpg" alt="Modern C++ textbook">
-</div>
+![C++ logo](./figs/cpp-logo.png) ![C++ programming textbook](./figs/textbook-nju.JPG) ![Modern C++ textbook](./figs/textbook-moderncpp.jpg)
 
 ---
-class: image-slide large-image
+class: image-slide large-image history-slide
 ---
 
 ### [C++ and Its C Roots @ cppreference](https://en.cppreference.com/w/cpp/language/history) **[[C++17](https://en.cppreference.com/w/cpp/17); [C++23](https://en.cppreference.com/w/cpp/23)]**
 
-<img src="./figs/c-history.jpg" alt="Programming language history">
+![Programming language history](./figs/c-history.jpg)
 
-You do <em>NOT</em> need to be a <strong>language lawyer</strong>!
+You do *not* need to be a **language lawyer**!
 
 ---
-layout: center
-class: no-page
+class: no-page two-media
 ---
 
-<div class="two-images">
-  <img src="./figs/poison.jpg" alt="Programming pitfalls">
-  <img src="./figs/not-sure-ask.jpg" alt="Ask when unsure">
-</div>
+![Programming pitfalls](./figs/poison.jpg) ![Ask when unsure](./figs/not-sure-ask.jpg)
 
 ---
 class: image-slide
 ---
 
-<img src="./figs/more-books.jpg" alt="More programming books">
+![More programming books](./figs/more-books.jpg)
 
-### <mark>More Books in the Class …</mark>
-
----
-layout: center
-class: no-page
----
-
-<img src="./figs/soft-skills-1.png" alt="Soft skills book">
+### **More Books in the Class …**
 
 ---
 layout: center
-class: no-page
+class: no-page book-slide
 ---
 
-<img src="./figs/pilao-book.jpg" alt="Programming book">
-
----
-layout: center
-class: no-page
----
-
-<img src="./figs/talk-cheap.jpg" alt="Talk is cheap, show me the code">
+![Soft skills book](./figs/soft-skills-1.png)
 
 ---
 layout: center
-class: no-page
+class: no-page book-slide
 ---
 
-<img src="./figs/hello-world-logo.jpg" alt="Hello World logo">
+![Programming book](./figs/pilao-book.jpg)
 
 ---
 layout: center
-class: no-page
+class: no-page book-slide
 ---
 
-<img src="./figs/hello-world-kandr.jpg" alt="Hello World from K&R">
+![Talk is cheap, show me the code](./figs/talk-cheap.jpg)
+
+---
+layout: center
+class: no-page book-slide
+---
+
+![Hello World logo](./figs/hello-world-logo.jpg)
+
+---
+layout: center
+class: no-page book-slide
+---
+
+![Hello World from K&R](./figs/hello-world-kandr.jpg)
 
 ---
 class: image-slide
@@ -273,18 +241,18 @@ class: image-slide
 
 # [Game: Guess the Number](https://www.abcya.com/games/guess_the_number)
 
-<img src="./figs/guess-the-number.png" alt="Guess the Number game">
+![Guess the Number game](./figs/guess-the-number.png)
 
 ---
 layout: center
-class: text-center
+class: text-center quote-slide
 ---
 
 # [Game: Guess the Number](https://www.abcya.com/games/guess_the_number)
 
-<p class="quote">Programming is <em>NOT</em> (only) about languages.</p>
+Programming is *not* (only) about languages.
 
-<p class="quote">You learn C++ to express <mark><strong>YOUR IDEAS</strong></mark> with <strong>COMPUTERS</strong>.</p>
+You learn C++ to express **your ideas** with **computers**.
 
 ---
 class: image-slide large-image
@@ -292,43 +260,40 @@ class: image-slide large-image
 
 # [C++ reference](https://en.cppreference.com/w/cpp)
 
-<img src="./figs/huawei-rand.png" alt="C++ random number guidance">
+![C++ random number guidance](./figs/huawei-rand.png)
 
 ---
 layout: center
-class: text-center
+class: text-center equation-slide
 ---
 
 # [Game: Guess the Number](https://www.abcya.com/games/guess_the_number)
 
-<p class="program-equation"><strong><span class="green">Program</span> = <span class="purple">Input</span> + <span class="blue">Data</span> + <span class="red">Operations</span> + <span class="purple">Output</span></strong></p>
+**Program** = *Input* + *Data* + *Operations* + *Output*
 
 ---
-class: image-slide
+class: two-media secure-slide
 ---
 
 # Secure Coding in C++
 
-<div class="two-images">
-  <img src="./figs/cpp-logo.png" alt="C++ logo">
-  <img src="./figs/huawei-rand.png" alt="C++ random number example">
-</div>
+![C++ logo](./figs/cpp-logo.png) ![C++ random number example](./figs/huawei-rand.png)
 
 ---
 class: image-slide
 ---
 
-<img src="./figs/ask-me-anything.png" alt="Ask me anything">
+![Ask me anything](./figs/ask-me-anything.png)
 
 ---
 class: image-slide large-image
 ---
 
-<img src="./figs/chatgpt.jpg" alt="ChatGPT illustration">
+![ChatGPT illustration](./figs/chatgpt.jpg)
 
 ---
 layout: center
 class: image-slide no-page closing
 ---
 
-<img src="./figs/thankyou.png" alt="Thank you">
+![Thank you](./figs/thankyou.png)

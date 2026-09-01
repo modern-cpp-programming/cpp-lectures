@@ -33,6 +33,7 @@ Desktop.ini
 coverage/
 .nyc_output/
 tmp/
+0-intro/render-check*/
 *.tmp
 *.temp
 *.bak
