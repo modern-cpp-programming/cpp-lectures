@@ -1,0 +1,92 @@
+@import '@fontsource-variable/inter';
+@import '@fontsource-variable/noto-sans-sc';
+@import '@fontsource/jetbrains-mono/400.css';
+@import '@fontsource/jetbrains-mono/600.css';
+
+:root {
+  --lecture-ink: #102a43;
+  --lecture-blue: #1f5f8b;
+  --lecture-orange: #d97706;
+  --lecture-red: #b42318;
+  --lecture-paper: #fffaf2;
+  --slidev-theme-primary: var(--lecture-blue);
+}
+
+.slidev-layout {
+  box-sizing: border-box;
+  color: var(--lecture-ink);
+  font-family: 'Inter', 'Noto Sans SC', sans-serif;
+  font-size: 1.35rem;
+  line-height: 1.45;
+  padding: 1.9rem 3.4rem;
+}
+
+.slidev-layout h1,
+.slidev-layout h2,
+.slidev-layout h3 {
+  color: var(--lecture-ink);
+  font-family: 'Inter', 'Noto Sans SC', sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  line-height: 1.15;
+}
+
+.slidev-layout h1 { font-size: 2.65rem; }
+.slidev-layout h2 { font-size: 2.2rem; }
+.slidev-layout h3 { font-size: 1.55rem; }
+.slidev-layout code { font-family: 'JetBrains Mono', monospace; }
+.slidev-layout a { color: var(--lecture-blue); font-weight: 600; }
+.slidev-layout mark { background: #ffdf9e; color: inherit; padding: 0.05em 0.18em; }
+.slidev-layout strong { font-weight: 700; }
+
+.slidev-page {
+  background: var(--lecture-paper);
+}
+
+.cover {
+  align-items: center;
+  background:
+    radial-gradient(circle at 88% 10%, #d6ebff 0, #d6ebff 14%, transparent 14.2%),
+    linear-gradient(135deg, #fffaf2 0%, #fffaf2 70%, #fff3df 100%);
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.cover h1 {
+  border-bottom: 0.16em solid var(--lecture-orange);
+  display: inline-block;
+  margin-bottom: 0.65rem;
+  padding-bottom: 0.22em;
+}
+
+.title-logo { margin: 0.75rem auto 0; max-height: 9.2rem; }
+.image-slide { align-items: center; display: flex; flex-direction: column; justify-content: center; text-align: center; }
+.image-slide h1, .image-slide h2, .image-slide h3 { margin-top: 0; }
+.image-slide img { max-height: 22rem; max-width: 88%; object-fit: contain; }
+.compact-image img { max-height: 18rem; }
+.two-images { align-items: center; display: flex; gap: 1.5rem; justify-content: center; }
+.two-images img { max-height: 22rem; max-width: 45%; object-fit: contain; }
+.three-images { align-items: center; display: flex; gap: 1rem; justify-content: center; }
+.three-images img { max-height: 20rem; max-width: 30%; object-fit: contain; }
+.large-image img { max-height: 26rem; max-width: 94%; }
+.side-image { align-items: center; display: grid; grid-template-columns: 1fr 0.95fr; gap: 1.25rem; }
+.side-image img { max-height: 25rem; max-width: 100%; object-fit: contain; }
+.score-list { font-size: 1.45rem; line-height: 1.75; }
+.muted-strike { color: var(--lecture-red); text-decoration: line-through; }
+.blue { color: var(--lecture-blue); }
+.red { color: var(--lecture-red); }
+.green { color: #207561; }
+.purple { color: #6b3fa0; }
+.program-equation { font-size: 2rem; line-height: 1.65; text-align: center; }
+.quote { font-size: 1.75rem; line-height: 1.6; text-align: center; }
+.resource-title { font-size: 1.95rem; margin-bottom: 1.5rem; }
+.closing img { max-height: 25rem; width: 42rem; }
+.no-page .slidev-page-number { display: none; }
+
+.slidev-page-number {
+  color: #52677d;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.7rem;
+  right: 1.35rem;
+}
