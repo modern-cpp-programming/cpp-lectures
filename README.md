@@ -1,6 +1,6 @@
 # Modern C++ Programming Lectures
 
-This repository contains the Slidev source for the Modern C++ Programming lecture series. Lecture 0 is in [`0-intro/slides.md`](0-intro/slides.md); its checked-in PDF and PowerPoint exports are public release artifacts.
+This repository contains the Slidev source for the Modern C++ Programming lecture series. Lecture 0 is in [`0-intro/slides.md`](backup/0-intro/slides.md); its checked-in PDF and PowerPoint exports are public release artifacts.
 
 ## Environment
 
@@ -29,7 +29,7 @@ Start the lecture 0 development server:
 npm run dev
 ```
 
-Edit [`0-intro/slides.md`](0-intro/slides.md) and save; Slidev refreshes the browser preview automatically. Shared visual rules live in [`0-intro/style.css`](0-intro/style.css).
+Edit [`0-intro/slides.md`](backup/0-intro/slides.md) and save; Slidev refreshes the browser preview automatically. Shared visual rules live in [`0-intro/style.css`](backup/0-intro/style.css).
 
 ## Publishing artifacts
 
@@ -45,4 +45,4 @@ Export the public PDF and PowerPoint files:
 npm run export
 ```
 
-The static preview is generated in `0-intro/dist/` and is intentionally untracked. In contrast, [`0-intro/0-intro.pdf`](0-intro/0-intro.pdf) and [`0-intro/0-intro.pptx`](0-intro/0-intro.pptx) are release artifacts and must remain tracked.
+The static preview is generated in `0-intro/dist/` and is intentionally untracked. In contrast, [`0-intro/0-intro.pdf`](backup/0-intro/0-intro.pdf) and [`0-intro/0-intro.pptx`](backup/0-intro/0-intro.pptx) are release artifacts and must remain tracked.
