@@ -1,44 +1,60 @@
-@import '@fontsource-variable/inter';
+@import '@fontsource-variable/radio-canada-big';
+@import '@fontsource-variable/source-serif-4';
 @import '@fontsource-variable/noto-sans-sc';
-@import '@fontsource/jetbrains-mono/400.css';
-@import '@fontsource/jetbrains-mono/600.css';
+@import '@fontsource-variable/geist-mono';
 
 :root {
-  --lecture-ink: #102a43;
-  --lecture-blue: #1f5f8b;
-  --lecture-orange: #d97706;
-  --lecture-red: #b42318;
-  --lecture-paper: #fffaf2;
+  --lecture-paper: #faf8f4;
+  --lecture-surface: #ffffff;
+  --lecture-cream: #ffead7;
+  --lecture-ink: #2b2620;
+  --lecture-ink-dim: #857b6e;
+  --lecture-border: #e7e0d4;
+  --lecture-blue: #476bff;
+  --lecture-blue-dark: #0129cc;
+  --lecture-mint: #53dfa9;
+  --lecture-mint-soft: #dbf9ee;
+  --lecture-lime: #cde519;
+  --lecture-red: #f5512e;
   --slidev-theme-primary: var(--lecture-blue);
+  --slidev-code-background: #f1eee8;
+  --slidev-code-foreground: var(--lecture-ink);
 }
 
 .slidev-page { background: var(--lecture-paper); }
 
 .slidev-layout {
   box-sizing: border-box;
+  background: var(--lecture-paper);
   color: var(--lecture-ink);
-  font-family: 'Inter', 'Noto Sans SC', sans-serif;
-  font-size: 1.35rem;
-  line-height: 1.45;
-  padding: 1.9rem 3.4rem;
+  font-family: 'Radio Canada Big Variable', 'Noto Sans SC Variable', sans-serif;
+  font-size: 1.28rem;
+  line-height: 1.48;
+  padding: 2.35rem 3.55rem;
 }
 
 .slidev-layout h1,
 .slidev-layout h2,
 .slidev-layout h3 {
   color: var(--lecture-ink);
-  font-family: 'Inter', 'Noto Sans SC', sans-serif;
-  font-weight: 700;
-  letter-spacing: -0.025em;
-  line-height: 1.15;
+  font-family: 'Source Serif 4 Variable', 'Noto Sans SC Variable', serif;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  line-height: 1.08;
 }
 
-.slidev-layout h1 { font-size: 2.65rem; }
-.slidev-layout h2 { font-size: 2.2rem; }
+.slidev-layout h1 { font-size: 2.78rem; margin-bottom: 1.05rem; }
+.slidev-layout h2 { font-size: 2.18rem; }
 .slidev-layout h3 { font-size: 1.55rem; }
-.slidev-layout code { font-family: 'JetBrains Mono', monospace; }
-.slidev-layout a { color: var(--lecture-blue); font-weight: 600; }
-.slidev-layout strong { font-weight: 700; }
+.slidev-layout code { font-family: 'Geist Mono Variable', monospace; }
+.slidev-layout a {
+  border-bottom: 1px solid color-mix(in srgb, var(--lecture-blue) 40%, transparent);
+  color: var(--lecture-blue);
+  font-family: 'Geist Mono Variable', 'Noto Sans SC Variable', monospace;
+  font-weight: 500;
+  text-decoration: none;
+}
+.slidev-layout strong { font-weight: 650; }
 
 .slidev-layout > p > img,
 .slidev-layout .col-left > p > img,
@@ -50,21 +66,29 @@
   object-fit: contain;
 }
 
-.cover {
-  background:
-    radial-gradient(circle at 88% 10%, #d6ebff 0, #d6ebff 14%, transparent 14.2%),
-    linear-gradient(135deg, #fffaf2 0%, #fffaf2 70%, #fff3df 100%);
-  padding-top: 2.5rem;
+.slidev-page .slidev-layout.cover {
+  align-items: center;
+  background: var(--lecture-paper);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-top: 1.2rem;
 }
 
-.cover h1 {
-  border-bottom: 0.16em solid var(--lecture-orange);
-  display: inline-block;
-  margin-bottom: 0.65rem;
-  padding-bottom: 0.22em;
+.slidev-page .slidev-layout.cover h1 {
+  font-size: 1.8rem;
+  line-height: 1.08;
+  margin: 0 auto 1rem;
+  max-width: 15rem;
 }
 
-.cover > p > img { max-height: 9.2rem; }
+.slidev-page .slidev-layout.cover .my-auto > p { margin: 0.16rem auto; }
+.slidev-page .slidev-layout.cover .my-auto > p > img {
+  height: auto;
+  margin: 0.15rem auto;
+  max-height: none;
+  width: 4rem;
+}
 
 .image-slide {
   align-items: center;
@@ -81,12 +105,24 @@
 .compact-image > p > img { max-height: 18rem; }
 .large-image > p > img { max-height: 26rem; max-width: 94%; }
 
+.image-slide > p:has(> img),
+.two-media > p:last-child,
+.scores-slide > p:last-child,
+.three-media > p:last-child {
+  border: 1px solid var(--lecture-border);
+  box-shadow: 0 14px 32px rgb(43 38 32 / 8%);
+}
+
+.image-slide > p:has(> img) { padding: 0.38rem; }
+.image-slide > p:has(> img + img) { border: 0; box-shadow: none; padding: 0; }
+
 .two-media > p:last-child {
   align-items: center;
   display: flex;
   gap: 1.5rem;
   justify-content: center;
   margin: 0;
+  padding: 0.42rem;
 }
 
 .two-media > p:last-child > img { max-height: 24rem; max-width: 46%; }
@@ -104,11 +140,12 @@
 .scores-slide ul { font-size: 1.42rem; line-height: 1.78; margin-top: 1.15rem; }
 .scores-slide li:first-child { color: var(--lecture-red); }
 .scores-slide li:not(:first-child) { color: var(--lecture-blue); }
-.scores-slide > p { align-self: center; grid-area: 1 / 2 / 3 / 3; margin: 0; }
+.scores-slide > p { align-self: center; grid-area: 1 / 2 / 3 / 3; margin: 0; padding: 0.42rem; }
 .scores-slide > p > img { max-height: 25rem; max-width: 100%; }
 
 .warning-slide strong { color: var(--lecture-red); }
 .warning-slide > p:last-child { font-size: 1.16rem; max-width: 52rem; }
+.journey-slide h2:first-of-type { color: var(--lecture-blue); }
 .journey-slide h2:last-child { color: var(--lecture-red); }
 
 .three-media > p {
@@ -117,12 +154,13 @@
   gap: 1rem;
   justify-content: center;
   margin: 0;
+  padding: 0.42rem;
 }
 
 .three-media > p > img { max-height: 20rem; max-width: 30%; }
 .history-slide > p:last-child { font-size: 1.25rem; margin-top: 0.5rem; }
 .history-slide em { color: var(--lecture-red); font-style: normal; font-weight: 700; }
-.book-slide > p:only-child > img { max-height: 28rem; max-width: 92%; }
+.book-slide > p:only-child > img { max-height: 22rem !important; max-width: 92%; }
 
 .quote-slide > p {
   font-size: 1.72rem;
@@ -139,7 +177,7 @@
   text-align: center;
 }
 
-.quote-slide > p:last-child strong { color: var(--lecture-orange); }
+.quote-slide > p:last-child strong { color: var(--lecture-blue); }
 .equation-slide > p {
   color: var(--lecture-blue);
   font-size: 2rem;
@@ -147,15 +185,15 @@
 }
 
 .equation-slide strong { color: #207561; }
-.equation-slide em { color: #6b3fa0; font-style: normal; font-weight: 700; }
+.equation-slide em { color: var(--lecture-red); font-style: normal; font-weight: 700; }
 .secure-slide > p:last-child > img:first-child { max-height: 16rem; }
 .secure-slide > p:last-child > img:last-child { max-height: 22rem; }
 .closing > p > img { max-height: 25rem; max-width: 80%; }
 
 .no-page .slidev-page-number { display: none; }
 .slidev-page-number {
-  color: #52677d;
-  font-family: 'Inter', sans-serif;
+  color: var(--lecture-ink-dim);
+  font-family: 'Geist Mono Variable', monospace;
   font-size: 0.7rem;
   right: 1.35rem;
 }

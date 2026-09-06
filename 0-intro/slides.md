@@ -5,7 +5,7 @@ titleTemplate: '%s | Modern C++ Programming'
 info: 'Modern C++ Programming — Lecture 0'
 author: Hengfeng Wei
 language: zh-CN
-class: text-center
+class: text-center cover
 drawings:
   persist: false
 transition: fade-out
