@@ -10,11 +10,13 @@ size: 16:9
 ---
 # <p id = "small-caps">1. &nbsp; Variables, Types, I/O</p>
 
+<br>
+
 [Hengfeng Wei (魏恒峰)](https://hengxin.github.io/)
 hfwei@hnu.edu.cn
 
 ![w:200](figs/cpp-logo.png)
-Sep. 16, 2026
+Sep. 17, 2026
 
 ---
 # Overview
@@ -40,8 +42,8 @@ Sep. 16, 2026
 ---
 ![w:600](figs/lets-code.jpeg)
 
-## <mark>circle.c &ensp; sphere.c</mark>
-## <mark>admin.c &ensp; admin-cin.c</mark>
+## <mark>circle.cpp &ensp; sphere.cpp</mark>
+## <mark>admin.cpp &ensp; admin-cin.cpp</mark>
 
 ---
 # Circle
@@ -66,9 +68,17 @@ $L = 2\pi r$ &emsp; $S = \pi r^2$
 
 * <mark>Declare/Define</mark> a *variable* called `radius`.
 * `radius` refers to a <mark>location</mark> in memory.
-* The <mark>type</mark> of `radius` is `int` (integer).
+* The <font color = red>**type**</font> of `radius` is `int` (integer).
 * `radius` is <mark>initialized</mark> to $10$.
 * You can <mark>assign</mark> other integers to `radius`.
+
+---
+
+## <mark>Type</mark> is a kind of <mark>Abstraction</mark>
+
+![w:700](figs/abstraction.png)
+
+### Type: set of allowed <font color = red>values \& operations</font>
 
 ---
 # Identifiers (标识符)
@@ -153,10 +163,10 @@ $Q = 6 / 32 \times 6.02 \times 10^{23}$
 ### <mark>Format Specification</mark>
 # <!--fit--> <code><font color = yellow><font color = blue>{</font>:[align][width][.precision]<font color = red>[type]</font><font color = blue>}</font></font></code>
 
-- <code><font color = red size = 7>%d</font></code>: decimal `int`
-- <code><font color = red size = 7>%f</font></code>: `double`
-- <code><font color = red size = 7>%s</font></code>: `string` (not necessarily)
-- <code><font color = red size = 7>%c</font></code>: `char` (not necessarily)
+- <code><font color = red size = 7>d</font></code>: decimal `int`
+- <code><font color = red size = 7>f</font></code>: `double`
+- <code><font color = red size = 7>s</font></code>: `string` (not necessarily)
+- <code><font color = red size = 7>c</font></code>: `char` (not necessarily)
 
 ---
 # <!--fit--> <code><font color = yellow><font color = blue>{</font>:<font color = red>[align]</font>[width][.precision][type]<font color = blue>}</font></font></code>
@@ -183,8 +193,8 @@ $Q = 6 / 32 \times 6.02 \times 10^{23}$
 <br>
 <br>
 
-* `%f`: <mark>number</mark> of digits after `.`
-* `%s`: <mark>maximum number</mark> of characters
+* `f`: <mark>number</mark> of digits after `.`
+* `s`: <mark>maximum number</mark> of characters
 
 
 ---
