@@ -7,8 +7,23 @@ class:
 backgroundColor: #FED8B1
 paginate: true
 size: 16:9
+style: |
+  section.invariant-slide { color: #17324D; font-size: 30px; }
+  section.invariant-slide h1 { font-size: 44px; }
+  section.invariant-slide strong { color: #005F73; }
+  section.invariant-slide pre { text-align: left; background: #FFF3E6; border: 2px solid #17324D; }
+  section.invariant-slide pre code { font-size: 26px; line-height: 1.4; background: transparent; }
+  section.invariant-slide pre code span { color: #17324D; }
+  section.invariant-slide pre code .hljs-keyword { color: #7030A0; }
+  section.invariant-slide pre code .hljs-comment { color: #005F73; }
+  section.invariant-slide code { color: #17324D; background: #FFFFFF70; }
+  section.invariant-slide footer { font-size: 15px; }
+  section.invariant-slide footer a { color: #17324D; }
+  section.invariant-slide small { font-size: 21px; }
 ---
 # <p id = "small-caps">3. &nbsp; While $\ldots$</p>
+
+<br>
 
 [Hengfeng Wei (魏恒峰)](https://hengxin.github.io/)
 hfwei@hnu.edu.cn
@@ -45,11 +60,25 @@ Sep. 24, 2026
 
 ---
 
-while syntax
+# `while` Statement
+
+![bg right:48% contain](figs/while-semantics.png)
+
+```cpp
+// initialize
+while (condition) {
+  // body + update
+}
+```
+
+May execute **zero** times.
 
 ---
+# Loop Invariant as Abstraction
 
-loop invariant
+#### <mark>What remains true before every iteration?</mark>
+
+![w:700](figs/while-flow.png)
 
 ---
 ![w:700](figs/lets-code.jpeg)
@@ -60,12 +89,33 @@ loop invariant
 
 # Greatest Common Divisor
 
-![w:350](figs/euclid.jpeg)
 $\text{gcd}(a, b) = \text{gcd}(b, a \;\%\; b)$
+
+![w:300](figs/euclid.jpeg)
+
+$$
+(48,18)\;\longrightarrow\;(18,12)\;\longrightarrow\;(12,6)\;\longrightarrow\;(6,0)
+$$
 
 ---
 
-loop invariant for euclid
+# Loop Invariant
+
+<br>
+
+#### $a_0,b_0>0$: original inputs
+
+<br>
+
+$$
+\boxed{\gcd(a,b)=\gcd(a_0,b_0)}
+$$
+
+<br>
+
+$$
+(a,b)\;\xrightarrow{\;b\ne0\;}\;(b,\;a \;\%\; b)
+$$
 
 ---
 
@@ -80,7 +130,24 @@ $F_{n} = F_{n-1} + F_{n-2} \quad (n > 1)$
 
 ---
 
-loop invariant for fib
+# Loop Invariant
+
+<br>
+
+$i: \texttt{index}$, $\quad 0\le i\le n$
+
+<br>
+
+$$
+\boxed{\texttt{previous}=F_i \qquad \texttt{current}=F_{i+1}}
+$$
+
+<br>
+
+$$
+\underbrace{(F_i,\;F_{i+1})}_{\text{before}}\;\longrightarrow\;
+\underbrace{(F_{i+1},\;F_i+F_{i+1})}_{\text{after: }(F_{i+1},\;F_{i+2})}
+$$
 
 ---
 # Number of Digits
@@ -98,46 +165,39 @@ loop invariant for fib
 ![w:900](figs/binary-search-mario.png)
 
 ---
-# Array Initializer
+# Array Initializer (DO)
 <br>
 
-* <code><font color = yellow size = 8>int numbers[NUM] = {1};</font></code>
+* <code style="background: transparent"><font color = "#17324D" size = 8>int numbers[4] = {1};</font></code>
+  First element is `1`; the rest are `0`.
 <br>
 
-* <code><font color = yellow size = 8>int numbers[] = {0, 1, 2};</font></code>
+* <code style="background: transparent"><font color = "#17324D" size = 8>int numbers[] = {0, 1, 2};</font></code>
+  Size is deduced: `3`.
+
 <br>
 
-* <code><font color = yellow size = 8>int numbers[NUM] = {[1] = 1};</font></code>
+* <code style="background: transparent"><font color = "#17324D" size = 8>int numbers[4] = {};</font></code>
+All elements are initialized to `0`.
 
 ---
 # Array Initializer (DON'T)
 <br>
 
-<code><font color = yellow size = 8>int numbers[NUM] = {};</font></code>
+<code style="background: transparent"><font color = "#17324D" size = 8>int numbers[4];</font></code>
 <br>
 
-## Forbidden in C99 (Unfortunately!)
-## Allowed by GCC by default (Unfortunately!!)
-## Allowed in C23 (Fortunately or not???)
+## Initialize before reading.
 
 ---
 # Array Initializer (DON'T)
 <br>
 
-<code><font color = yellow size = 8>int numbers[NUM];</font></code>
+<code style="background: transparent"><font color = "#17324D" size = 8>int numbers[];</font></code>
 <br>
 
-## `numbers` may contain garbage values;
-## always initialize it
-
----
-# Array Initializer (DON'T)
-<br>
-
-<code><font color = yellow size = 8>int numbers[];</font></code>
-<br>
-
-## You <mark>must</mark> specify the size so that the compiler/runtime can allocate memory for it.
+## Specify the size, or provide initial values.
+## `int numbers[] = {0, 1, 2};`
 
 ---
 ![bg w:600](figs/see-you.jpeg)
