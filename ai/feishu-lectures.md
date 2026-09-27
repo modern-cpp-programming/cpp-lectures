@@ -368,3 +368,83 @@ while (condition) {
 2. 图片放入该子目录的 `figs/` 目录
 
 3. 完成后简要汇报：新增幻灯片数量、覆盖了哪些飞书章节、使用了哪些图片、有无需用户确认之处
+
+---
+
+# Task: marp-export
+
+## 中文：Marp 导出
+
+## 任务描述
+
+将指定的 Marp Markdown 文件导出为 PDF、PowerPoint (PPTX)、PNG 图片等格式，输出到 Markdown 文件所在目录。
+
+---
+
+## 输入参数
+
+| 参数 | 说明 |
+|------|------|
+| **Marp Markdown 文件路径** | 相对于 `cpp-lectures` 仓库根目录的 `.md` 文件路径，如 `2026/4-for-a-while/4-for-a-while.md` |
+
+---
+
+## 执行前确认（必读）
+
+1. **文件路径**：用户是否提供了有效的 `.md` 文件路径？该文件是否存在？
+2. **导出格式**：默认导出全部格式（PDF + PPTX + PNG）。如用户指定了特定格式，按用户要求。
+3. **覆盖确认**：如果目标目录下已存在同名的 PDF/PPTX/PNG 文件，导出会覆盖。如需保留旧版本，先询问用户。
+
+---
+
+## 导出方式
+
+使用 `@marp-team/marp-cli`（VS Code Marp 插件底层工具）从仓库根目录执行导出。
+
+### 导出命令
+
+```powershell
+cd <cpp-lectures 仓库根目录>
+npx @marp-team/marp-cli@latest <相对路径/xxx.md> `
+  --pdf --pptx --images png `
+  --theme-set themes/2022cpl.css `
+  --allow-local-files
+```
+
+### 参数说明
+
+| 参数 | 作用 |
+|------|------|
+| `--pdf` | 导出 PDF |
+| `--pptx` | 导出 PowerPoint (PPTX) |
+| `--images png` | 将每张幻灯片导出为 PNG 图片 |
+| `--theme-set themes/2022cpl.css` | 加载自定义主题（仓库根目录下的 themes/2022cpl.css） |
+| `--allow-local-files` | 允许访问本地图片文件（figs/ 目录下的图片） |
+
+### 输出文件
+
+所有输出保存在 `.md` 文件所在目录，文件名与 `.md` 同名：
+
+| 格式 | 输出文件 |
+|------|----------|
+| PDF | `xxx.pdf` |
+| PowerPoint | `xxx.pptx` |
+| PNG | `xxx.001.png`、`xxx.002.png`、...（每页一张） |
+| HTML | `xxx.html`（如需导出，追加 `--html` 参数） |
+
+---
+
+## 注意事项
+
+1. **工作目录**：必须在 `cpp-lectures` 仓库根目录下执行命令，否则 `themes/2022cpl.css` 和 `figs/` 相对路径会找不到。
+2. **首次运行**：`npx` 会自动下载 marp-cli，首次可能需要等待较长时间。
+3. **Chromium 依赖**：PDF 和 PPTX 导出需要 Chromium。如果报错缺少浏览器，执行 `npx puppeteer browsers install chrome`。
+4. **自定义 style 块**：如果 `.md` 的 frontmatter 中包含 `style:` 块（如 3-while.md），marp-cli 会自动识别，无需额外参数。
+5. **导出后验证**：导出完成后，检查输出文件是否存在且非空；如果 marp-cli 报错，根据错误信息排查（常见：图片路径错误、主题文件缺失、Chromium 未安装）。
+
+---
+
+## 输出交付
+
+1. 在 `.md` 文件同目录下生成 PDF、PPTX、PNG 等文件
+2. 完成后汇报：导出了哪些格式、共多少张幻灯片、是否有报错或警告
