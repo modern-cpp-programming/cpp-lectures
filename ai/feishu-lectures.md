@@ -171,6 +171,18 @@ Sep. 24, 2026
 
 关键部分可嵌套 `<font color="red">` 或 `<font color="green">` 强调。
 
+**行内代码（反引号 `` `xxx` ``）默认黄字**：在 frontmatter 中添加 `style:` 块，使行内代码默认显示为灰底黄字：
+
+```yaml
+style: |
+  :not(pre) > code { color: #ffd700; }
+  font[color] :not(pre) > code { color: inherit; }
+```
+
+- 第一条：所有行内代码（非代码块内的 `<code>`）默认黄色字体
+- 第二条：如果代码被 `<font color=...>` 包裹（如 Review 中红/蓝条目），继承容器颜色，不强制改黄
+- 如果代码已显式指定 `<font color="red">` 等，保留用户指定颜色
+
 **多行代码块**：用 fenced code block，配合 `class:` 或自定义样式：
 
 
@@ -437,11 +449,18 @@ while (condition) {
 
 ```
 cd <cpp-lectures 仓库根目录>
-npx @marp-team/marp-cli@latest <相对路径/xxx.md> `
-  --pdf --pptx --images png `
-  --theme-set themes/2022cpl.css `
-  --allow-local-files
+# PDF
+npx @marp-team/marp-cli@latest <相对路径/xxx.md> --pdf `
+  --theme-set themes/2022cpl.css --allow-local-files --no-stdin
+# PPTX
+npx @marp-team/marp-cli@latest <相对路径/xxx.md> --pptx `
+  --theme-set themes/2022cpl.css --allow-local-files --no-stdin
+# PNG（每页一张）
+npx @marp-team/marp-cli@latest <相对路径/xxx.md> --images png `
+  --theme-set themes/2022cpl.css --allow-local-files --no-stdin
 ```
+
+> 注意：`--pdf`、`--pptx`、`--images` 三者互斥，必须分别执行三条命令。
 
 ### 参数说明
 

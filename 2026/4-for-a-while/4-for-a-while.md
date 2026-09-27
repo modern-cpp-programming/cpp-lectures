@@ -7,6 +7,9 @@ class:
 backgroundColor: #FED8B1
 paginate: true
 size: 16:9
+style: |
+  :not(pre) > code { color: #ffd700; }
+  font[color] :not(pre) > code { color: inherit; }
 ---
 # <p id = "small-caps">4. &nbsp; For $\ldots$</p>
 
