@@ -485,40 +485,34 @@ while (condition) {
 cd <cpp-lectures 仓库根目录>
 # PDF
 npx @marp-team/marp-cli@latest <相对路径/xxx.md> --pdf `
-  --theme-set themes/2022cpl.css --allow-local-files --no-stdin
+  --theme-set themes/2022cpl.css --allow-local-files --html --no-stdin
 # PPTX
 npx @marp-team/marp-cli@latest <相对路径/xxx.md> --pptx `
-  --theme-set themes/2022cpl.css --allow-local-files --no-stdin
-# PNG（每页一张）
-npx @marp-team/marp-cli@latest <相对路径/xxx.md> --images png `
-  --theme-set themes/2022cpl.css --allow-local-files --no-stdin
+  --theme-set themes/2022cpl.css --allow-local-files --html --no-stdin
+# PNG（仅首页，命名与 md 同名）
+npx @marp-team/marp-cli@latest <相对路径/xxx.md> --image png `
+  --theme-set themes/2022cpl.css --allow-local-files --html --no-stdin
 ```
 
 > 注意：
 >
-> `--pdf`
+> `--pdf`、`--pptx`、`--image` 三者互斥，必须分别执行三条命令。
 >
-> 、
->
-> `--pptx`
->
-> 、
->
-> `--images`
->
->  三者互斥，必须分别执行三条命令。
+> `--html` **必须加**：Marp CLI 默认禁用 HTML 标签，不加会导致 PDF/PPTX 显示为源码文本而非渲染后的幻灯片。
 
 ### 参数说明
 
 
 
-| 参数                               | 作用                                  |
-| -------------------------------- | ----------------------------------- |
-| `--pdf`                          | 导出 PDF                              |
-| `--pptx`                         | 导出 PowerPoint (PPTX)                |
-| `--images png`                   | 将每张幻灯片导出为 PNG 图片                    |
-| `--theme-set themes/2022cpl.css` | 加载自定义主题（仓库根目录下的 themes/2022cpl.css） |
-| `--allow-local-files`            | 允许访问本地图片文件（figs/ 目录下的图片）            |
+| 参数 | 作用 |
+|------|------|
+| `--pdf` | 导出 PDF |
+| `--pptx` | 导出 PowerPoint (PPTX) |
+| `--image png` | 仅将首页导出为 PNG（文件名为 `xxx.png`） |
+| `--html` | 启用 HTML 标签渲染（**必加**，否则 PDF/PPTX 显示源码） |
+| `--theme-set themes/2022cpl.css` | 加载自定义主题 |
+| `--allow-local-files` | 允许访问本地图片（figs/ 目录） |
+| `--no-stdin` | 不等待 stdin（避免命令挂起） |
 
 ### 输出文件
 
@@ -526,12 +520,11 @@ npx @marp-team/marp-cli@latest <相对路径/xxx.md> --images png `
 
 
 
-| 格式         | 输出文件                                  |
-| ---------- | ------------------------------------- |
-| PDF        | `xxx.pdf`                             |
-| PowerPoint | `xxx.pptx`                            |
-| PNG        | `xxx.001.png`、`xxx.002.png`、...（每页一张） |
-| HTML       | `xxx.html`（如需导出，追加 `--html` 参数）       |
+| 格式 | 输出文件 |
+|------|----------|
+| PDF | `xxx.pdf` |
+| PowerPoint | `xxx.pptx` |
+| PNG（首页） | `xxx.png` |
 
 
 
