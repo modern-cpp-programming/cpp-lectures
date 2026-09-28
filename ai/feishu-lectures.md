@@ -125,7 +125,7 @@ Sep. 24, 2026
 
 * 如果本讲只覆盖更大主题的一部分，用 `$\ldots$` 省略（如 `"If $\ldots$"`、`"While $\ldots$"`）
 
-* 标题后**不加 `<br>`**，直接接作者信息
+* 标题后**不加&#x20;**`<br>`，直接接作者信息
 
 * 邮箱统一用 `hfwei@hnu.edu.cn`
 
@@ -171,17 +171,23 @@ Sep. 24, 2026
 
 关键部分可嵌套 `<font color="red">` 或 `<font color="green">` 强调。
 
-**行内代码（反引号 `` `xxx` ``）默认黄字**：在 frontmatter 中添加 `style:` 块，使行内代码默认显示为灰底黄字：
+**行内代码（反引号&#x20;**`` `xxx` ``**）默认黄字**：在 frontmatter 中添加 `style:` 块，使行内代码默认显示为灰底黄字：
 
-```yaml
+
+
+```
 style: |
   :not(pre) > code { color: #ffd700; }
   font[color] :not(pre) > code { color: inherit; }
 ```
 
-- 第一条：所有行内代码（非代码块内的 `<code>`）默认黄色字体
-- 第二条：如果代码被 `<font color=...>` 包裹（如 Review 中红/蓝条目），继承容器颜色，不强制改黄
-- 如果代码已显式指定 `<font color="red">` 等，保留用户指定颜色
+
+
+* 第一条：所有行内代码（非代码块内的 `<code>`）默认黄色字体
+
+* 第二条：如果代码被 `<font color=...>` 包裹（如 Review 中红 / 蓝条目），继承容器颜色，不强制改黄
+
+* 如果代码已显式指定 `<font color="red">` 等，保留用户指定颜色
 
 **多行代码块**：用 fenced code block，配合 `class:` 或自定义样式：
 
@@ -265,34 +271,62 @@ while (condition) {
 以下规则来自用户对 AI 生成 PPT 的实际修改，必须严格遵守：
 
 **幻灯片数量**
-- 每个概念**最多 1 张幻灯片**，不要为一个概念拆成多张（如不要同时有"while 版本"、"for 版本"、"语义解释"三张——只保留最核心的一张）
-- 宁可少一页，不可多一页；课堂讲解时口头补充细节，PPT 上只留关键词
+
+
+
+* 每个概念**最多 1 张幻灯片**，不要为一个概念拆成多张（如不要同时有 "while 版本"、"for 版本"、"语义解释" 三张 —— 只保留最核心的一张）
+
+* 宁可少一页，不可多一页；课堂讲解时口头补充细节，PPT 上只留关键词
 
 **图片优先**
-- 能用图片说清楚的，不要用代码或文字（如 palindrome、stars、primes、selection sort 都只放图片，不加解释文字）
-- 代码块只在**语法本身需要展示**时使用（如 for 语句的三段式语法），不要贴算法实现代码
+
+
+
+* 能用图片说清楚的，不要用代码或文字（如 palindrome、stars、primes、selection sort 都只放图片，不加解释文字）
+
+* 代码块只在**语法本身需要展示**时使用（如 for 语句的三段式语法），不要贴算法实现代码
 
 **去掉解释性 bullet**
-- 不要写 `* xxx is...`、`* Note that...` 这类说明性列表
-- 不要写 "Iteratively compute pairwise minimum."、"Outer loop: which row." 这类口头解释
-- 幻灯片上的文字 = 标题 + 关键公式/代码 + 图片，仅此而已
+
+
+
+* 不要写 `* xxx is...`、`* Note that...` 这类说明性列表
+
+* 不要写 "Iteratively compute pairwise minimum."、"Outer loop: which row." 这类口头解释
+
+* 幻灯片上的文字 = 标题 + 关键公式 / 代码 + 图片，仅此而已
 
 **去掉多余内容**
-- 不要性能对比表（课堂上口头说）
-- 不要循环不变量的 `\boxed{}` 公式（口头讲）
-- 不要 "swap 需要临时变量" 这类常识说明
-- 不要 "Array bounds: i < NUM not i <= NUM" 这类提醒（口头强调即可）
-- 不要 "for scope" 这类概念解释（语法演示中自然体现）
+
+
+
+* 不要性能对比表（课堂上口头说）
+
+* 不要循环不变量的 `\boxed{}` 公式（口头讲）
+
+* 不要 "swap 需要临时变量" 这类常识说明
+
+* 不要 "Array bounds: i < NUM not i <= NUM" 这类提醒（口头强调即可）
+
+* 不要 "for scope" 这类概念解释（语法演示中自然体现）
 
 **排版细节**
-- 标题页标题后**不加 `<br>`**，直接接作者信息
-- 标题用小写短语（如 "min of an array"，不是 "Min of an Array"）
-- 减少 `<br>` 空行，靠内容自然撑开
-- for 语法三段颜色：init=`red`、condition=`blue`、iteration=`cyan`
+
+
+
+* 标题页标题后**不加&#x20;**`<br>`，直接接作者信息
+
+* 标题用小写短语（如 "min of an array"，不是 "Min of an Array"）
+
+* 减少 `<br>` 空行，靠内容自然撑开
+
+* for 语法三段颜色：init=`red`、condition=`blue`、iteration=`cyan`
 
 ### 6. 内容与飞书文档的对应关系
 
 飞书文档是完整的课堂讲义（详细讲解、代码示例、拓展阅读），PPT 是提炼后的投影材料。对应原则：
+
+
 
 * 飞书文档中**每个一级小节**，提炼为 **1 张**幻灯片（不是 1～3 张）
 
@@ -460,7 +494,19 @@ npx @marp-team/marp-cli@latest <相对路径/xxx.md> --images png `
   --theme-set themes/2022cpl.css --allow-local-files --no-stdin
 ```
 
-> 注意：`--pdf`、`--pptx`、`--images` 三者互斥，必须分别执行三条命令。
+> 注意：
+>
+> `--pdf`
+>
+> 、
+>
+> `--pptx`
+>
+> 、
+>
+> `--images`
+>
+>  三者互斥，必须分别执行三条命令。
 
 ### 参数说明
 

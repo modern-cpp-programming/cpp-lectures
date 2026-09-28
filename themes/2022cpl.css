@@ -10,7 +10,21 @@ header {
 
 section {
   justify-content: start;
+  background-color: #FED8B1;
+  background-image: none;
+  width: 1280px;
+  height: 720px;
 }
+
+/* Inline code inherits explicit emphasis colors when present. */
+:not(pre) > code { color: #ffd700; }
+font[color] :not(pre) > code { color: inherit; }
+
+/* Opt in on the title slide with <!-- _class: lead cover -->. */
+section.cover { justify-content: center; }
+section.cover h1 { margin: 0 0 28px; }
+section.cover p { margin: 0; }
+section.cover p + p { margin-top: 24px; }
 
 del {
   text-decoration: line-through;

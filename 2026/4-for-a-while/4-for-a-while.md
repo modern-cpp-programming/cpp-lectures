@@ -4,14 +4,11 @@ theme: 2022cpl
 class:
   - lead
 
-backgroundColor: #FED8B1
 paginate: true
-size: 16:9
-style: |
-  :not(pre) > code { color: #ffd700; }
-  font[color] :not(pre) > code { color: inherit; }
 ---
-# <p id = "small-caps">4. &nbsp; For $\ldots$</p>
+<!-- _class: lead cover -->
+
+# <span id = "small-caps">4. &nbsp; For (a While)</span>
 
 [Hengfeng Wei (魏恒峰)](https://hengxin.github.io/)
 hfwei@hnu.edu.cn
@@ -58,7 +55,7 @@ Sep. 28, 2026
 ## <mark>primes.cpp &ensp; selection-sort.cpp</mark>
 
 ---
-# min of an array
+# Min of an Array
 
 <br>
 
