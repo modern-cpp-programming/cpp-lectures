@@ -34,7 +34,6 @@ Sep. 28, 2026
 <font color = blue>
 
 ## [ ]; std::array
-## std::vector
 
 </font>
 
