@@ -10,6 +10,8 @@ paginate: true
 
 # <span id = "small-caps">4. &nbsp; For (a While)</span>
 
+<br>
+
 [Hengfeng Wei (魏恒峰)](https://hengxin.github.io/)
 hfwei@hnu.edu.cn
 
