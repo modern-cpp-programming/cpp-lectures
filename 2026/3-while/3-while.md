@@ -23,8 +23,6 @@ style: |
 ---
 # <p id = "small-caps">3. &nbsp; While $\ldots$</p>
 
-<br>
-
 [Hengfeng Wei (魏恒峰)](https://hengxin.github.io/)
 hfwei@hnu.edu.cn
 
@@ -163,41 +161,6 @@ $$
 # Binary Search
 
 ![w:900](figs/binary-search-mario.png)
-
----
-# Array Initializer (DO)
-<br>
-
-* <code style="background: transparent"><font color = "#17324D" size = 8>int numbers[4] = {1};</font></code>
-  First element is `1`; the rest are `0`.
-<br>
-
-* <code style="background: transparent"><font color = "#17324D" size = 8>int numbers[] = {0, 1, 2};</font></code>
-  Size is deduced: `3`.
-
-<br>
-
-* <code style="background: transparent"><font color = "#17324D" size = 8>int numbers[4] = {};</font></code>
-All elements are initialized to `0`.
-
----
-# Array Initializer (DON'T)
-<br>
-
-<code style="background: transparent"><font color = "#17324D" size = 8>int numbers[4];</font></code>
-<br>
-
-## Initialize before reading.
-
----
-# Array Initializer (DON'T)
-<br>
-
-<code style="background: transparent"><font color = "#17324D" size = 8>int numbers[];</font></code>
-<br>
-
-## Specify the size, or provide initial values.
-## `int numbers[] = {0, 1, 2};`
 
 ---
 ![bg w:600](figs/see-you.jpeg)
