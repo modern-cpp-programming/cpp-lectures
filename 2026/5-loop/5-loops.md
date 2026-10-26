@@ -16,7 +16,7 @@ paginate: true
 hfwei@hnu.edu.cn
 
 ![w:200](figs/cpp-logo.png)
-Oct. 09, 2026
+Oct. 26, 2026
 
 ---
 # Review
@@ -41,9 +41,10 @@ Oct. 09, 2026
 ### <font color = blue>Multi-dimensional Arrays (多维数组)</font>
 
 ---
-![w:800](figs/lets-code.jpeg)
+![w:700](figs/lets-code.jpeg)
 
-## <mark>josephus.cpp &ensp; game-of-life.cpp &ensp; insertion-sort.cpp</mark>
+## <mark>josephus.cpp &ensp; game-of-life.cpp</mark>
+## <mark>insertion-sort.cpp &ensp; bubble-sort.cpp</mark>
 
 ---
 
@@ -53,9 +54,11 @@ Oct. 09, 2026
 
 ---
 
-<!-- ![w:800](figs/J.jpg) -->
-
 ## $J(2^m + l) = 2l + 1 \quad {\small (m \ge 0 \land 0 \le l < 2^m)}$
+
+![w:700](figs/J.jpg)
+
+### $J(12) = J(2^3 + 4) = 2 \times 4 + 1 = 9$
 
 ---
 # [Conway's Game of Life @ wiki](https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life)
@@ -112,4 +115,4 @@ Oct. 09, 2026
 ![w:1000](figs/bubble-sort-wiki.gif)
 
 ---
-![bg w:600](figs/see-you.jpeg)
+![bg w:1100](figs/thank-you.png)
