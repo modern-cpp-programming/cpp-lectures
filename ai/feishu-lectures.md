@@ -441,7 +441,7 @@ while (condition) {
 
 ## 任务描述
 
-将指定的 Marp Markdown 文件导出为 PDF、PowerPoint (PPTX)、PNG 图片等格式，输出到 Markdown 文件所在目录。
+将指定的 Marp Markdown 文件导出为 HTML、PDF、PowerPoint (PPTX)、PNG 图片等格式，输出到 Markdown 文件所在目录。
 
 
 
@@ -465,9 +465,9 @@ while (condition) {
 
 1. **文件路径**：用户是否提供了有效的 `.md` 文件路径？该文件是否存在？
 
-2. **导出格式**：默认导出全部格式（PDF + PPTX + PNG）。如用户指定了特定格式，按用户要求。
+2. **导出格式**：默认导出全部格式（HTML + PDF + PPTX + PNG）。如用户指定了特定格式，按用户要求。
 
-3. **覆盖确认**：如果目标目录下已存在同名的 PDF/PPTX/PNG 文件，导出会覆盖。如需保留旧版本，先询问用户。
+3. **覆盖确认**：如果目标目录下已存在同名的 HTML/PDF/PPTX/PNG 文件，导出会覆盖。如需保留旧版本，先询问用户。
 
 
 
@@ -483,6 +483,9 @@ while (condition) {
 
 ```
 cd <cpp-lectures 仓库根目录>
+# HTML（自包含单文件，可浏览器直接打开）
+npx @marp-team/marp-cli@latest <相对路径/xxx.md> `
+  --theme-set themes/2022cpl.css --allow-local-files --html --no-stdin
 # PDF
 npx @marp-team/marp-cli@latest <相对路径/xxx.md> --pdf `
   --theme-set themes/2022cpl.css --allow-local-files --html --no-stdin
@@ -496,9 +499,11 @@ npx @marp-team/marp-cli@latest <相对路径/xxx.md> --image png `
 
 > 注意：
 >
-> `--pdf`、`--pptx`、`--image` 三者互斥，必须分别执行三条命令。
+> - **HTML 导出**：不带 `--pdf`/`--pptx`/`--image` 时，marp-cli 默认输出 `xxx.html`（自包含单文件）。
 >
-> `--html` **必须加**：Marp CLI 默认禁用 HTML 标签，不加会导致 PDF/PPTX 显示为源码文本而非渲染后的幻灯片。
+> - `--pdf`、`--pptx`、`--image` 三者互斥，必须分别执行三条命令。
+>
+> - `--html` **必须加**：Marp CLI 默认禁用 HTML 标签，不加会导致 PDF/PPTX 显示为源码文本而非渲染后的幻灯片。
 
 ### 参数说明
 
@@ -506,6 +511,7 @@ npx @marp-team/marp-cli@latest <相对路径/xxx.md> --image png `
 
 | 参数 | 作用 |
 |------|------|
+| （无格式参数） | 默认导出 HTML（自包含单文件 `xxx.html`） |
 | `--pdf` | 导出 PDF |
 | `--pptx` | 导出 PowerPoint (PPTX) |
 | `--image png` | 仅将首页导出为 PNG（文件名为 `xxx.png`） |
@@ -518,10 +524,9 @@ npx @marp-team/marp-cli@latest <相对路径/xxx.md> --image png `
 
 所有输出保存在 `.md` 文件所在目录，文件名与 `.md` 同名：
 
-
-
 | 格式 | 输出文件 |
 |------|----------|
+| HTML | `xxx.html` |
 | PDF | `xxx.pdf` |
 | PowerPoint | `xxx.pptx` |
 | PNG（首页） | `xxx.png` |
@@ -552,6 +557,6 @@ npx @marp-team/marp-cli@latest <相对路径/xxx.md> --image png `
 
 
 
-1. 在 `.md` 文件同目录下生成 PDF、PPTX、PNG 等文件
+1. 在 `.md` 文件同目录下生成 HTML、PDF、PPTX、PNG 等文件
 
 2. 完成后汇报：导出了哪些格式、共多少张幻灯片、是否有报错或警告
