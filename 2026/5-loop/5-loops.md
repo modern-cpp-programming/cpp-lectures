@@ -119,7 +119,7 @@ Oct. 29, 2026
 <video control width = "1100"> <source src="videos/Conway-Game-of-Life.mp4" type = "video/mp4"> </video>
 
 ---
-# Insertion Sort
+# [Insertion Sort](https://en.wikipedia.org/wiki/Insertion_sort)
 ![w:600](figs/insertion-sort-poker.png)
 
 ---
@@ -138,7 +138,7 @@ Oct. 29, 2026
 ![w:1100](figs/insertion-sort-after.png)
 
 ---
-# Bubble Sort
+# [Bubble Sort](https://en.wikipedia.org/wiki/Bubble_sort)
 
 ![w:900](figs/bubble-sort.png)
 
