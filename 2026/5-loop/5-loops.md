@@ -54,6 +54,26 @@ Oct. 29, 2026
 
 ---
 
+![w:1100](figs/vector.PNG)
+
+---
+
+![w:800](figs/vector-iterator.PNG)
+
+---
+
+![w:1200](figs/vector-ops.PNG)
+
+---
+
+![w:900](figs/vector-pushback.PNG)
+
+---
+
+![w:1100](figs/vector-erase.PNG)
+
+---
+
 ## $J(2^m + l) = 2l + 1 \quad {\small (m \ge 0 \land 0 \le l < 2^m)}$
 
 ![w:700](figs/J.jpg)
@@ -79,9 +99,20 @@ Oct. 29, 2026
 * All other <font color = red>**dead**</font> cells stay dead.
 
 ---
-<br>
 
-![left w:500](figs/Gospers-glider-gun.gif) &ensp; ![right w:600](figs/breeder.gif)
+### [Glider](https://playgameoflife.com/)
+
+![w:900](figs/glider.png)
+
+---
+
+### [Gosper glider gun](https://en.wikipedia.org/wiki/Gun_(cellular_automaton))
+
+![w:800](figs/Gospers-glider-gun.gif)
+
+---
+
+![w:1200](figs/breeder.gif)
 
 ---
 <video control width = "1100"> <source src="videos/Conway-Game-of-Life.mp4" type = "video/mp4"> </video>
