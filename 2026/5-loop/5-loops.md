@@ -108,11 +108,12 @@ Oct. 29, 2026
 
 ### [Gosper glider gun](https://en.wikipedia.org/wiki/Gun_(cellular_automaton))
 
-![w:800](figs/Gospers-glider-gun.gif)
+![w:750](figs/Gospers-glider-gun.gif)
 
 ---
+### [Puffer-type breeder](https://en.wikipedia.org/wiki/Puffer_train)
 
-![w:1200](figs/breeder.gif)
+![w:1000](figs/breeder.gif)
 
 ---
 <video control width = "1100"> <source src="videos/Conway-Game-of-Life.mp4" type = "video/mp4"> </video>
@@ -134,7 +135,7 @@ Oct. 29, 2026
 
 <br>
 
-![w:1100](figs/insertion-sort-before.png)
+![w:1100](figs/insertion-sort-after.png)
 
 ---
 # Bubble Sort
